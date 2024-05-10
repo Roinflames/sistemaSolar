@@ -4,24 +4,29 @@ import './App.css';
 import header from "./components/header";
 import home from './components/home';
 import footer from './components/footer';
-
+import axios from "axios";
 
 
 function App() {
   function render() {
+    axios.get(
+     "http://localhost:3001/tierra"
+    )
+    .then((response) => {
+      console.log(response)
+      return response
+    })
+
+
     // Calling function and assigned it to the variable
-    const mytable = "this.getTable()";
-  
-    return (
-      <>
-        {/* rendered the JSX */}
-       mytable 
-      </>
-    );
+    const mytable = "compañereishon";
+    return mytable
   }
+  const mytable = render()
   return ( 
     <div className="App">
-       {render} 
+       {mytable} 
+       {"render"} 
     </div>
   );
 }
