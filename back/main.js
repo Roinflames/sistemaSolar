@@ -1,8 +1,34 @@
 const express = require('express');
 const app = express();
 const port = 3001;
+const axios = require('axios');
 
 // API PLANETAS 
+
+app.get('/name', (req, res) => {
+    console.log(req.body);
+    let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: 'https://api.api-ninjas.com/v1/planets?name=MERCURY',
+    headers: { 
+        'X-Api-Key': 'QXcTvnRQSwwf+uWm7W7FHQ==jof5MLouWMKumU4n'
+    }
+    };
+
+    axios.request(config)
+    .then((response) => {
+        const data = JSON.stringify(response.data);
+        console.log(data);
+        res.send(data);
+
+    })
+    .catch((error) => {
+    console.log(error);
+    });
+});
+
+
 app.get('/mercurio', (req, res) => {
     const axios = require('axios');
 
