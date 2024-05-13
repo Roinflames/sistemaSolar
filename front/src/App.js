@@ -19,7 +19,7 @@ function App() {
 
 
     // Calling function and assigned it to the variable
-    const mytable = "compañereishon";
+    const mytable = "compa";
     return mytable
   }
   const mytable = render()
