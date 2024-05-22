@@ -16,9 +16,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.send('¡Hola, mundo desde Express.js!');
-});
+
 
 app.listen(port, () => {
   console.log(`La aplicación está escuchando en http://localhost:${port}`);
