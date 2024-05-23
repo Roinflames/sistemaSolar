@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 3001;
+const cors = require('cors');
+const  path = require('path');
 
 // Habilita CORS para todas las solicitudes
 app.use(cors());
