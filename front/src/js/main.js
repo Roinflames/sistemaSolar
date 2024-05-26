@@ -53,25 +53,41 @@ document.addEventListener('DOMContentLoaded', () => {
                     const planetNameInEnglish = planet.name.toLowerCase(); // Convertir a minúsculas para la clave del objeto de traducción
                     const planetNameInSpanish = planetTranslations[planetNameInEnglish] || planet.name;
 
-                    planetInfo.innerHTML += `
-                        <h2>${translations.name}: ${planetNameInSpanish}</h2>
-                        <p>${translations.mass}: ${planet.mass}</p>
-                        <p>${translations.radius}: ${planet.radius}</p>
-                        <p>${translations.period}: ${planet.period} ${translations.days}</p>
-                        <p>${translations.semi_major_axis}: ${planet.semi_major_axis} ${translations.AU}</p>
-                        <p>${translations.temperature}: ${planet.temperature} ${translations.K}</p>
-                        <p>${translations.distance_light_year}: ${planet.distance_light_year} ${translations.light_years}</p>
-                        <p>${translations.host_star_mass}: ${planet.host_star_mass}</p>
-                        <p>${translations.host_star_temperature}: ${planet.host_star_temperature} ${translations.K}</p>
-                        <hr>
+                    const planetCard = document.createElement('div');
+                    planetCard.className = 'card mb-3';
+                    planetCard.innerHTML = `
+                        <div class="card-body">
+                            <h2 class="card-title">${translations.name}: ${planetNameInSpanish}</h2>
+                            <p class="card-text">${translations.mass}: ${planet.mass}</p>
+                            <p class="card-text">${translations.radius}: ${planet.radius}</p>
+                            <p class="card-text">${translations.period}: ${planet.period} ${translations.days}</p>
+                            <p class="card-text">${translations.semi_major_axis}: ${planet.semi_major_axis} ${translations.AU}</p>
+                            <p class="card-text">${translations.temperature}: ${planet.temperature} ${translations.K}</p>
+                            <p class="card-text">${translations.distance_light_year}: ${planet.distance_light_year} ${translations.light_years}</p>
+                            <button class="btn btn-primary btn-block read-button"></button>
+                        </div>
                     `;
+                    planetInfo.appendChild(planetCard);
+
+                    const readButton = planetCard.querySelector('.read-button');
+                    readButton.addEventListener('click', () => {
+                        readText(planetCard);
+                    });
                 } else {
-                    planetInfo.innerHTML += `<p>${data.error}</p>`;
+                    planetInfo.innerHTML += `<p class="text-danger">${data.error}</p>`;
                 }
             });
         })
         .catch(error => {
             console.error('Error:', error);
-            planetInfo.innerHTML = `<p>Error mamerta</p>`;
+            planetInfo.innerHTML = `<p class="text-danger">Error al obtener la información</p>`;
         });
+
+    // Función para leer el texto en voz alta
+    function readText(element) {
+        const planetInfoText = element.innerText;
+        const speech = new SpeechSynthesisUtterance(planetInfoText);
+        speech.lang = 'es-ES'; // Establecer el idioma a español
+        window.speechSynthesis.speak(speech);
+    }
 });
