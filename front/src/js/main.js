@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="card-text">${translations.semi_major_axis}: ${planet.semi_major_axis} ${translations.AU}</p>
                             <p class="card-text">${translations.temperature}: ${planet.temperature} ${translations.K}</p>
                             <p class="card-text">${translations.distance_light_year}: ${planet.distance_light_year} ${translations.light_years}</p>
-                            <button class="btn btn-primary btn-block read-button"> Leer </button>
+                            <button class="btn btn-primary  read-button style="font-size: smaller;"> Leer </button>
                         </div>
                     `;
                     planetInfo.appendChild(planetCard);
