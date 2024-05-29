@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         radius: 'Radio',
         period: 'Período Orbital',
         semi_major_axis: 'Distancia del Sol',
-        temperature: 'Temperatura',
+        temperature: 'Temperatura del planeta',
         distance_light_year: 'Distancia de la Tierra',
         host_star_mass: 'Masa de la Estrella Anfitriona',
         host_star_temperature: 'Temperatura de la Estrella Anfitriona',
@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return fetch(`http://localhost:3001/${planetName}`)
             .then(response => response.json())
             .catch(error => {
-                console.error(`Error fetching data for ${planetName}:`, error);
-                return { error: `Failed to retrieve data for ${planetName}` };
+                console.error(`Error ${planetName}:`, error);
+                return { error: `Presentamos algunos inconveniente con el planeta ${planetName}` };
             });
     });
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="card-text">${translations.semi_major_axis}: ${planet.semi_major_axis} ${translations.AU}</p>
                             <p class="card-text">${translations.temperature}: ${planet.temperature} ${translations.K}</p>
                             <p class="card-text">${translations.distance_light_year}: ${planet.distance_light_year} ${translations.light_years}</p>
-                            <button class="btn btn-primary btn-block read-button"></button>
+                            <button class="btn btn-primary btn-block read-button"> Leer </button>
                         </div>
                     `;
                     planetInfo.appendChild(planetCard);
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error:', error);
-            planetInfo.innerHTML = `<p class="text-danger">Error al obtener la información</p>`;
+            planetInfo.innerHTML = `<p class="text-danger"> Error al obtener la información </p>`;
         });
 
     // Función para leer el texto en voz alta
