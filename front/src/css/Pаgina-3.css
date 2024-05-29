@@ -80,7 +80,7 @@ body {
   margin-top: 180px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Mercurio.jpg);
+  background: url(../images/Mercurio.jpg);
   background-size: cover;
   background-position: left;
   bottom: 0px;
@@ -102,7 +102,7 @@ body {
   margin-top: 600px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Venus.jpg);
+  background: url(../images/Venus.jpg);
   background-size: cover;
   background-position: left;
   bottom: 0px;
@@ -124,7 +124,7 @@ body {
   margin-top: 300px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Tierra.jpg);
+  background: url(../images/Tierra.jpg);
   background-size: cover;
   background-position: left;
   bottom: 0px;
@@ -150,7 +150,7 @@ body {
   margin-top: 30px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Marte.jpg);
+  background: url(../images/Marte.jpg);
   background-size: cover;
   background-position: left;
   bottom: 0px;
@@ -173,7 +173,7 @@ body {
   margin-top: 550px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Jupiter.jpg);
+  background: url(../images/Jupiter.jpg);
   background-size: cover;
   background-position: left;
   bottom: 0px;
@@ -199,7 +199,7 @@ body {
   margin-top: 180px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Saturno.png);
+  background: url(../images/Saturno.png);
   background-size: cover;
   background-position: left;
   bottom: 0px;
@@ -222,7 +222,7 @@ body {
   margin-top: 450px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Urano.jpg);
+  background: url(../images/Urano.jpg);
   background-size: cover;
   background-position: left;
   bottom: 0px;
@@ -245,7 +245,7 @@ body {
   margin-top: 100px; /* Ajusta la posición vertical */
   position: relative;
   transition: left 0.3s linear;
-  background: url(../src/imgPlanetas/Neptuno.jpg);
+  background: url(../images/Neptuno.jpg);
   background-size: cover;
   background-position: left;
   bottom: 0px;
