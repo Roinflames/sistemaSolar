@@ -16,6 +16,8 @@
         });
     });
 }); */
+
+//NO OCUPADO MATALO
 document.addEventListener('DOMContentLoaded', function () {
     const planets = document.querySelectorAll('.planet');
 

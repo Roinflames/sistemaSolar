@@ -1,3 +1,5 @@
+//MOVIMIENTO SUAVE DE LA PÁGINA AL SELECCIONAR UN PLANETA
+
 document.querySelectorAll('.planet').forEach(planet => {
     planet.addEventListener('click', function(event) {
         event.preventDefault();

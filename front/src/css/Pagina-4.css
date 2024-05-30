@@ -1,0 +1,405 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(
+    315deg,
+    #060116,
+    #1b3950
+  );
+  color: white;
+  scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: url(../images/backgroundmenu.png);
+  background-size: auto;
+  background-position: left;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  position: relative;
+  text-align: center;
+  
+}
+
+.var{
+  animation: slideIn 1.5s ease-out;
+}
+
+.solar-system {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh; /* Ajusta la altura del contenedor según tus necesidades */
+  position: relative;
+  margin-top: 250px;
+  margin-left: -650px;
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%); /* Desplazar desde la derecha fuera de la pantalla */
+  }
+  to {
+      transform: translateX(0); /* Desplazar hacia el centro a la posición original */
+  }
+}
+
+.planet {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.2s;
+  will-change: transform;
+  position: relative;
+}
+
+.planet:hover {
+  transform: scale(1.25);
+  transition: 0.60s;
+}
+
+#info-box {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  display: none;
+}
+
+.sun {
+  width: 650px;
+  height: 650px;
+  background-color: yellow;
+  margin-top: 150px; /* Ajusta la posición vertical */
+}
+
+.mercury {
+  width: 40px;
+  height: 40px;
+  margin-top: 180px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Mercurio.jpg);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+    -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.venus {
+  width: 75px;
+  height: 75px;
+  margin-top: 600px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Venus.jpg);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+    -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.earth {
+  width: 87.5px;
+  height: 87.5px;
+  margin-top: 300px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Tierra.jpg);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+  -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+  -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.mars {
+  width: 62.5px;
+  height: 62.5px;
+  background-color: red;
+  margin-top: 30px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Marte.jpg);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+    -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.jupiter {
+  width: 187.5px;
+  height: 187.5px;
+  background-color: brown;
+  margin-top: 550px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Jupiter.jpg);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+    -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.saturn {
+  width: 137.5px;
+  height: 137.5px;
+  background-color: goldenrod;
+  margin-top: 180px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Saturno.png);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+    -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.uranus {
+  width: 112.5px;
+  height: 112.5px;
+  background-color: lightblue;
+  margin-top: 450px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Urano.jpg);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+    -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.neptune {
+  width: 106.25px;
+  height: 106.25px;
+  background-color: darkblue;
+  margin-top: 100px; /* Ajusta la posición vertical */
+  position: relative;
+  transition: left 0.3s linear;
+  background: url(../images/Neptuno.jpg);
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    -15px -2px 25px #000 inset, 24px 2px 34px #c3f4ff99 inset,
+    -250px 0px 44px #00000066 inset, -150px 0px 38px #000000aa inset;
+
+}
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.section {
+  padding: 50px 20px;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+/* ----- | ----- TEXTO MENU ----- | ----- */
+
+.item-hints .hint {
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-hints .hint-dot {
+  
+}
+.item-hints .hint-radius {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.item-hints .hint[data-position="1"] .hint-content {
+  top: 85px;
+  left: 50%;
+  margin-left: 56px;
+}
+.item-hints .hint-content {
+  width: 300px;
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  opacity: 0;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  color: #fff;
+  visibility: hidden;
+  pointer-events: none;
+}
+.item-hints .hint:hover .hint-content {
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  color: #fff;
+  visibility: visible;
+  pointer-events: none;
+}
+.item-hints .hint-content::before {
+  width: 0px;
+  bottom: 29px;
+  left: 0;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  position: absolute;
+  transition: width 0.4s;
+}
+.item-hints .hint:hover .hint-content::before {
+  width: 180px;
+  transition: width 0.4s;
+}
+.item-hints .hint-content::after {
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+  bottom: 29px;
+  left: 0;
+  width: 80px;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.item-hints .hint:hover .hint-content::after {
+  opacity: 1;
+  visibility: visible;
+}
+.item-hints .hint[data-position="4"] .hint-content {
+  bottom: 85px;
+  left: 50%;
+  margin-left: 56px;
+}

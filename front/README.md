@@ -1,7 +1,7 @@
 INICIAR
 
-1- En consola estar parado en el back y ejecutar 
+1- EN CONSOLA, EN CARPETA BACK, EJECUTAR:
+   npm start
 
-'npm start'
-
-2- Abrir inicio.html
+2- ABRIR ARCHIVO
+  ' .html'
