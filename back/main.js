@@ -56,27 +56,27 @@ app.get('/mercurio', (req, res) => {
 });
 
 app.get('/venus', (req, res) => {
-  const axios = require('axios');
+    const axios = require('axios');
 
-  let config = {
-  method: 'get',
-  maxBodyLength: Infinity,
-  url: 'https://api.api-ninjas.com/v1/planets?name=VENUS',
-  headers: { 
+    let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: 'https://api.api-ninjas.com/v1/planets?name=VENUS',
+    headers: { 
       'X-Api-Key': 'QXcTvnRQSwwf+uWm7W7FHQ==jof5MLouWMKumU4n'
-  }
-  };
+    }
+    };
 
-  axios.request(config)
-  .then((response) => {
+    axios.request(config)
+    .then((response) => {
       const data = JSON.stringify(response.data);
-  console.log(data);
-  res.send(data);
+    console.log(data);
+    res.send(data);
 
-  })
-  .catch((error) => {
-  console.log(error);
-  });
+    })
+    .catch((error) => {
+    console.log(error);
+    });
 });
 
 app.get('/tierra', (req, res) => {
@@ -227,4 +227,5 @@ app.get('/neptuno', (req, res) => {
 app.listen(port, () => {
   console.log(`La aplicación está escuchando en http://localhost:${port}`);
 });
+
 

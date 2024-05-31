@@ -4,31 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Solar</title>
-    <link rel="stylesheet" href="../src/css/P�gina-4.css" media="screen">
+    <link rel="stylesheet" href="./css/Pagina-4.css" media="screen">
 </head>
 <body>
-
+ <!--MENU DEL SISTEMA SOLAR-->
     <section class="menu container">
-        
-        <div class="var"><img src="../src/imgPlanetas/LOGO2.png" style="width: 250px; height: 75px;"><br><br><br><br><br></div>
+        <div class="var"><br><br><br><br><br></div>
         <div class="solar-system">
+            <a href="#sol" class="planet sun" data-name="Sol"></a>
             <div class="item-hints">
                 <div class="hint" data-position="4">
-                  <span class="hint-radius"></span>
-                  <span class="hint-dot"><a href="#sol" class="planet sun"></a></a></span>
-                  <div class="hint-content do--split-children">
-                    <p>El Sol, la estrella en el centro de nuestro Sistema Solar.</p>
+                    <span class="hint-radius"></span>
+                    <span class="hint-dot"><a href="#mercurio" class="planet mercury"></a></a></span>
+                    <div class="hint-content do--split-children">
+                      <p>Mercurio, el planeta más pequeño y cercano al Sol.</p>
+                    </div>
                   </div>
-                </div>
-            </div>
-            <div class="item-hints">
-                <div class="hint" data-position="4">
-                  <span class="hint-radius"></span>
-                  <span class="hint-dot"><a href="#mercurio" class="planet mercury"></a></span>
-                  <div class="hint-content do--split-children">
-                    <p>Mercurio, el planeta más pequeño y cercano al Sol.</p>
-                  </div>
-                </div>
             </div>
             <div class="item-hints">
                 <div class="hint" data-position="4">
@@ -80,7 +71,7 @@
                   <span class="hint-radius"></span>
                   <span class="hint-dot"><a href="#urano" class="planet uranus"></a></span>
                   <div class="hint-content do--split-children">
-                    <p>Urano, el planeta verde agua mas frio del Sistema Solar.</p>
+                    <p>Urano, conocido como el gigante de hielo.</p>
                   </div>
                 </div>
             </div>
@@ -93,16 +84,15 @@
                   </div>
                 </div>
             </div>
+            
         </div>
     </section>
+    <br>
+    <!--SECCION DE INFORMACION-->
 
-    <img src="../src/imgPlanetas/LOGO2.png" style="width: 250px; height: 75px;">
 
-
-    <div id="sol" class="section">
-        <h2>Sol</h2>
-        <p>Descripción del Sol...</p>
-    </div>
+    <!--SECCION DE INFORMACION-->
+    <div id="planet-info"></div>
     <div id="mercurio" class="section">
         <h2>Mercurio</h2>
         <p>Descripción de Mercurio...</p>
@@ -136,7 +126,9 @@
         <p>Descripción de Neptuno...</p>
     </div>
 
-    <script src="js/scripts2.js"></script>
+    <script src="./js/prueba.js"></script>
+   
+    <script src="./js/scripts2.js"></script>
 
 </body>
 </html>
