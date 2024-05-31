@@ -87,8 +87,11 @@ body {
   width: 650px;
   height: 650px;
   background-color: yellow;
-  background: url(../images/sol.png);
   margin-top: 150px; /* Ajusta la posición vertical */
+  background: url(../images/sol.png);
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), 5px 0px 8px #c3f4ff inset,
+    
+    -250px 0px 44px #d8751966 inset, -150px 0px 38px #ad6f45aa inset;
 }
 
 .mercury {
@@ -406,34 +409,32 @@ body {
 }
 
 /* borde de la inf api*/
+
 .planet-section {
-  margin-top: 30px; /* Agrega espacio en la parte superior */
-  margin-bottom: 50px; /* Espacio entre secciones de planetas */
+  margin-bottom: 50px; /* Espacio entre secciones de planetas*/
   padding: 10px; /* Espacio dentro de la sección */
   border-width: 3px; /* Ancho del borde */
   border-style: solid; /* Estilo del borde (doble línea) */
   border-radius: 90px; /* Radio del borde (forma ovalada) */
   max-width: 800px; /* Ancho máximo de la sección */
-  margin-left: auto; /* Centra la sección horizontalmente */
+  /*margin-left: auto; Centra la sección horizontalmente */
   margin-right: auto; /* Centra la sección horizontalmente */
   border-color: #58afd1; /* Color del borde para Mercurio */
   border-spacing: 50px; /* Separación entre las líneas dobles */
 }
 
 .planet-section2 {
-  margin-top: 30px; /* Agrega espacio en la parte superior */
-  margin-bottom: 50px; /* Espacio entre secciones de planetas */
+  margin-bottom: 50px; /* Espacio entre secciones de planetas*/
   padding: 30px; /* Espacio dentro de la sección */
   border-width: 3px; /* Ancho del borde */
   border-style: solid; /* Estilo del borde (doble línea) */
   border-radius: 80px; /* Radio del borde (forma ovalada) */
   max-width: 800px; /* Ancho máximo de la sección */
   margin-left: auto; /* Centra la sección horizontalmente */
-  margin-right: auto; /* Centra la sección horizontalmente */
+  margin-right: 350px; /* Centra la sección horizontalmente */
   border-color: #f8e805; /* Color del borde para Mercurio */
   border-spacing: 50px; /* Separación entre las líneas dobles */
 }
-
 
 
 
